@@ -1,0 +1,27 @@
+{
+  "name": "calculator_ui",
+  "version": "1.0.0",
+  "description": "calculator user interface using react JS",
+  "main": "index.js",
+  "proxy": "http://localhost:3000/",
+  "scripts": {
+    "start": "webpack-dev-server --hot"
+  },
+  "author": "Varsha Amrutlal Katariya 012468079",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-preset-es2015": "^6.24.1",
+    "bootstrap": "^4.0.0",
+    "html-webpack-plugin": "^3.0.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.3",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}
