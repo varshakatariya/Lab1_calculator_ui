@@ -83,7 +83,7 @@ class App extends React.Component {
     }
 
     numberClicked(event){
-
+        event.preventDefault();
         if(this.state.operator == ""){
             this.setFirstNumber(event.target.value);
         }
@@ -93,6 +93,7 @@ class App extends React.Component {
     }
 
     pointClicked(event){
+        event.preventDefault();
         if(this.state.operator == ""){
             this.setFirstNumber(event.target.value);
         }
@@ -102,6 +103,7 @@ class App extends React.Component {
     }
 
     opClicked(event){
+        event.preventDefault();
         console.log("Operator " + event.target.value);
 
         if(event.target.value == "="){
@@ -163,7 +165,7 @@ class App extends React.Component {
                 <form className="form-inline">
                     <div className="row">
                         <div className="col-sm-8 col-sm-offset-4">
-                            <input className="col-xs-4" id="textbox1" type="text" value={this.state.displayValue} onChange={this.handleChange}/>
+                            <input className="col-xs-4" id="textbox1" disable type="text" value={this.state.displayValue} onChange={this.handleChange.bind(this)}/>
                         </div>
                     </div>
                 <div className="row">
@@ -175,7 +177,7 @@ class App extends React.Component {
                 <div className="row">
                     <div className="col-sm-8 col-sm-offset-4">
                             <button id="btn7" value="7" className="btn btn-default col-xs-1" onClick={this.numberClicked}>7</button>
-                            <button id="btn8" value="8" className="btn btn-default col-xs-1" onClick={this.numberClicked}>8</button>
+                            <button id="btn8" value="8" className="btn btn-default col-xs-1" onClick={this.numberClicked.bind(this)}>8</button>
                             <button id="btn9" value="9" className="btn btn-default col-xs-1" onClick={this.numberClicked}>9</button>
                             <button id="btnDiv" value="/" className="btn btn-default col-xs-1" onClick={this.opClicked}>/</button>
                         </div>
